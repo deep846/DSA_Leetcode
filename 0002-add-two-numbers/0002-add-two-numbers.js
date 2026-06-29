@@ -24,7 +24,7 @@ var addTwoNumbers = function(l1, l2) {
 
     while(l1!==null || l2!==null){
 
-        if(l1!==null || l2!==null){
+        // if(l1!==null || l2!==null){
             
             let carry = stack.length > 0 ? stack.pop() : 0;
             sum = (l1 !== null && l2 !== null)
@@ -45,7 +45,7 @@ var addTwoNumbers = function(l1, l2) {
             head.next = new ListNode();
             head = head.next;
             }
-        }
+        // }
 
     }
 
