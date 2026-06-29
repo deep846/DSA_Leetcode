@@ -19,6 +19,9 @@ var addTwoNumbers = function(l1, l2) {
     let output = [];
     let sum = 0;
     let val = 0
+    let head = new ListNode();
+    let main = head;
+
     while(l1!==null || l2!==null){
 
         if(l1!==null || l2!==null){
@@ -34,28 +37,32 @@ var addTwoNumbers = function(l1, l2) {
             val = Math.floor(sum / 10);
             stack.push(val);
             sum = (sum) % 10;
-            output.push(sum);
+            head.val=sum;
             // console.log(sum);
             if(l1) l1 = l1.next;
             if(l2) l2  = l2.next;
+            if(l1!=null || l2!=null){
+            head.next = new ListNode();
+            head = head.next;
+            }
         }
 
     }
 
     if(stack.length>0 && stack.at(-1)!==0){
-        output.push(stack.pop());
+            head.next = new ListNode();
+            head = head.next;
+            head.val=stack.pop();
     }
     
-    let head = new ListNode();
-    let main = head;
 
-    for(let i=0; i<output.length; i++){
-        head.val = output[i];
-        if(i !== output.length-1){
-        head.next = new ListNode();
-        head = head.next;
-        }
-    }
+    // for(let i=0; i<output.length; i++){
+    //     head.val = output[i];
+    //     if(i !== output.length-1){
+    //     head.next = new ListNode();
+    //     head = head.next;
+    //     }
+    // }
 
     return main;
 };
