@@ -13,10 +13,8 @@ var removeDuplicates = function(nums) {
         else{
             j++;
         }
-        if(j===nums.length){
-            // console.log(nums.slice(0,i+1))
-            return ++i;
-        }
     }
+
+    return ++i;
 
 };
