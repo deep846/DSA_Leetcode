@@ -31,25 +31,19 @@ var sortedSquares = function(nums) {
     }
 
     if(i>0){
-        let negArray = nums.slice(0,i);
+        let negArray = nums.slice(0,i).reverse();
         let posArray = nums.slice(i,nums.length);
         negArray = squreArray(negArray);
         posArray = squreArray(posArray);
 
-        if(negArray.length==0){
-            return posArray;
-        }
-        else if(posArray.length==0){
-            return negArray.reverse();
-        }
         nums =[];
         // console.log(negArray,posArray);
-        let n=negArray.length - 1;
+        let n=0;
         let p = 0;
 
-        while(n>=0 || p<posArray.length){
+        while(n<negArray.length || p<posArray.length){
 
-            if(n>=0 && p<posArray.length){
+            if(n<negArray.length && p<posArray.length){
 
                 if(negArray[n]>=posArray[p]){
                     nums.push(posArray[p])
@@ -57,16 +51,16 @@ var sortedSquares = function(nums) {
                 }
                 else if(negArray[n]<posArray[p]){
                     nums.push(negArray[n])
-                    n--;
+                    n++;
                 }
             }
-            else if(n<0){
+            else if(n>=negArray.length){
                 nums.push(...posArray.slice(p,posArray.length));
                 p = posArray.length;
             }
             else if(p>=posArray.length){
-                nums.push(...negArray.slice(0,n+1).reverse());
-                n = -1;
+                nums.push(...negArray.slice(n,negArray.length));
+                n = negArray.length;
             }
         }
 
