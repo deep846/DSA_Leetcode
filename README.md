@@ -24,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0002-add-two-numbers](https://github.com/deep846/DSA_Leetcode/tree/main/0002-add-two-numbers/) | Medium |
 | [0013-roman-to-integer](https://github.com/deep846/DSA_Leetcode/tree/main/0013-roman-to-integer/) | Easy |
+| [0371-sum-of-two-integers](https://github.com/deep846/DSA_Leetcode/tree/main/0371-sum-of-two-integers/) | Medium |
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -40,4 +41,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/deep846/DSA_Leetcode/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0371-sum-of-two-integers](https://github.com/deep846/DSA_Leetcode/tree/main/0371-sum-of-two-integers/) | Medium |
 <!---LeetCode Topics End-->
