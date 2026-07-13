@@ -26,13 +26,21 @@
 var sortedSquares = function(nums) {
     let i=0;
 
-    while(nums[i]<0){
-        i++;
+    let negArray = [];
+    let posArray = [];
+
+    for(i;i<nums.length;i++){
+        if(nums[i]<0){
+            negArray.push(nums[i]);
+        }
+        else{
+            posArray.push(nums[i]);
+        }
     }
 
     if(i>0){
-        let negArray = nums.slice(0,i).reverse();
-        let posArray = nums.slice(i,nums.length);
+         negArray = negArray.reverse();
+        // let posArray = nums.slice(i,nums.length);
         negArray = squreArray(negArray);
         posArray = squreArray(posArray);
 
