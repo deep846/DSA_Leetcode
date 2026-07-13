@@ -15,7 +15,7 @@ var removeDuplicates = function(nums) {
             j++;
         }
         if(j===nums.length){
-            console.log(nums.slice(0,i+1))
+            // console.log(nums.slice(0,i+1))
             return k;
         }
     }
